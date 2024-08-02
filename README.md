@@ -78,4 +78,4 @@ scrapy crawl nesk
         Replace `/path/to/your/project` with the actual path to your project directory.
         Replace `/path/to/your/venv` with the actual path to your virtual environment directory.
 
-    - These cron jobs will run the `kmkr` and `mchs` spiders every 10 minutes and log the output to `kmkr.log` and `mchs.log` respectively.
+    - These cron jobs will run the `kmkr`, `mchs` and `nesk` spiders every 10 minutes and log the output to `kmkr.log` and `mchs.log` respectively.
