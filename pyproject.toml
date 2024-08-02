@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "press-releases-scrapy"
+name = "press-releases"
 version = "0.1.0"
 description = ""
 authors = ["Karim Kabirov <karim3487@gmail.com>"]
