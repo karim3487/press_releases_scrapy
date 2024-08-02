@@ -1,17 +1,10 @@
-from pydantic import BaseSettings
+from environs import Env
 
+env = Env()
+env.read_env()
 
-class Settings(BaseSettings):
-    username: str
-    password: str
-    host: str
-    port: str
-    db_name: str
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
-        env_nested_delimiter = "__"
-
-
-config = Settings()
+USERNAME: str = env.str("USERNAME")
+PASSWORD: str = env.str("PASSWORD")
+HOST: str = env.str("HOST")
+PORT: str = env.str("PORT")
+DB_NAME: str = env.str("DB_NAME")
