@@ -21,7 +21,9 @@ class MchsSpider(scrapy.Spider):
     def parse_detail(self, response):
         item = PressReleasesItem()
         item["title"] = response.css("h1.news-title::text").get()
-        item["text"] = " ".join(response.css("div.col-xl-10 p::text").getall()[3:])
+        item["text"] = "\n".join(
+            text.strip() for text in response.css("div.col-xl-10 p::text").getall()[3:]
+        ).strip()
         item["date_published"] = str_to_datetime(
             response.css("p.me-2::text").get(), "%d.%m.%Y %H:%M"
         )
